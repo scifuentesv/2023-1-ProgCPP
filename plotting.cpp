@@ -30,9 +30,7 @@ int main(int argc, char **argv)
     double myval = mysin(x, ite);
     double otherval = extension(x, ite);
     double padeval = pade(x);
-    fout << ite << "\t" << myval << "\t"
-         << otherval << "\t" << padeval << "\t" << exact << "\t" << std::fabs(1.0 - myval/exact) 
-         << "\t" << std::fabs(1.0 - otherval/exact) << "\t" << std::fabs(1.0 - padeval/exact)
+    fout << ite << "\t" << myval << "\t" << otherval << "\t" << padeval << "\t" << exact << "\t" << std::fabs(1.0 - myval/exact) << "\t" << std::fabs(1.0 - otherval/exact) << "\t" << std::fabs(1.0 - padeval/exact)
          << "\n";
   }
   fout.close();
@@ -45,8 +43,7 @@ double mysin(double x, int nterms)
   for(int k = 0; k <= nterms; ++k) {
     total += std::pow(-1, k)*std::pow(x, 2*k+1)/factorial(2*k+1);
   }
-  if (nterms>5)
-  {
+  if(nterms>5){
     total = 0;
   }
   return total;
