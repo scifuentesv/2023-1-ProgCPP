@@ -8,3 +8,9 @@ ax.set_xlabel("Iter")
 ax.set_ylabel("Percentual diff")
 plt.show()
 fig.savefig("plotting_hw.pdf",bbox_inches='tight')
+
+# Beyla Darassia Martinez Perez
+# Nicolas Acero Vargas
+# Sergio Andres Cifuentes Vasquez
+# Juan Manuel Gonzalez
+# Sebastian Prieto Cruz
